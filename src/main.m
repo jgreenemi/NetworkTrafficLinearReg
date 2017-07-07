@@ -45,7 +45,7 @@ fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
 alpha = 0.0006;
-num_iters = 800;
+num_iters = 8000;
 
 % Init Theta and Run Gradient Descent 
 theta = zeros(columns(X), 1);
