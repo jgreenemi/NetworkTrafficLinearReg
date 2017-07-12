@@ -15,7 +15,7 @@ clear ; close all; clc
 fprintf('Loading data ...\n');
 
 %% Load Data
-data = load('../resources/traffic-training-set.txt');
+data = load('../resources/traffic-training-set-large.txt');
 y = data(:, columns(data));
 X = data(:, 1:(columns(data) - 1));
 X_orig = X;
@@ -44,7 +44,7 @@ X_orig = [ones(m, 1) X_orig];
 fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
-alpha = 0.0006;
+alpha = 0.0012;
 num_iters = 8000;
 
 % Init Theta and Run Gradient Descent 
