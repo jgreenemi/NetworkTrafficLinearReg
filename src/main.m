@@ -8,6 +8,9 @@
 % - TCP request/response transaction size (measured in bytes)
 % - transactions per second
 
+% Set up script timing.
+tic
+
 %% Initialization and feature normalization.
 
 clear ; close all; clc
@@ -15,7 +18,7 @@ clear ; close all; clc
 fprintf('Loading data ...\n');
 
 %% Load Data
-data = load('../resources/traffic-training-set-large.txt');
+data = load('../resources/traffic-training-set-mid.txt');
 y = data(:, columns(data));
 X = data(:, 1:(columns(data) - 1));
 X_orig = X;
@@ -45,7 +48,7 @@ fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
 alpha = 0.0012;
-num_iters = 8000;
+num_iters = 10000;
 
 % Init Theta and Run Gradient Descent 
 theta = zeros(columns(X), 1);
@@ -143,3 +146,6 @@ predict_results = [predict_orig, expected_result, capacity_index];
 printf(' ========================================== \n')
 printf('TPS: %.1f, Size: %.1f, Expected: %i, Capacity Index: %i\n', predict_results');
 printf(' ========================================== \n')
+
+% End script timing.
+toc
