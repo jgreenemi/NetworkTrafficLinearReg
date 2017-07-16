@@ -3,7 +3,7 @@ A practice implementation of a linear regression machine learning algorithm for 
 
 This will be a linear regression algorithm to predict a resulting capacity index value `y`, given features of `requests_per_second` and `request_response_pair_size`.
 
-Goal: Accurately predict the y value given just those two figures, based on training set.
+Goal: Accurately predict the y value (+/- 5) given just those two figures, based on training set.
 
 ---
 
@@ -18,3 +18,5 @@ The training set is comprised of two features, and the resulting "capacity index
 * `gradientDescentMulti.m` runs our gradient descent.
 * `hypothesis.m` is our actual hypothesis. This really needn't be broken out but was done in case of being able to try making sweeping changes later on in the work.
 * `plotData.m` is used for making visual representations of the data, so I can use the same settings across multiple figures quickly.
+
+This Github repository is related to a project described in this blog post: [Predicting Server Capacity with Linear Regression ML](https://jgreenemi.com/predicting-capacity-with-linear-regression-ml/).
